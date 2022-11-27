@@ -75,3 +75,5 @@ group :test do
 end
 
 gem "standardrb", "~> 1.0"
+
+gem "devise", "~> 4.8"
