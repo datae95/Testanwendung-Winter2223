@@ -11,27 +11,36 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="mb-3">
+    <%= form.label :name, style: "display: block", class: "form-label" %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :version, style: "display: block", class: "form-label" %>
+    <%= form.text_field :version, class: 'form-control' %>
+    <div class="form-text">
+      Most gems you will see, use semantic versioning. You will learn more on this topic in the course.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :url, style: "display: block", class: "form-label" %>
+      <%= form.text_field :url, class: 'form-control' %>
+    <div class="form-text">
+      Github link for more information on the gem.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :description, style: "display: block", class: "form-label" %>
+    <%= form.text_area :description, class: 'form-control' %>
+    <div class="form-text">
+      You find more information on Github.
+    </div>
   </div>
 
   <div>
-    <%= form.label :version, style: "display: block" %>
-    <%= form.text_field :version %>
-  </div>
-
-  <div>
-    <%= form.label :url, style: "display: block" %>
-    <%= form.text_field :url %>
-  </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>

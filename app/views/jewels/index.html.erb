@@ -1,6 +1,5 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Jewels</h1>
+<%= link_to "New jewel", new_jewel_path %>
 
 <div id="jewels">
   <% @jewels.each do |jewel| %>
@@ -11,4 +10,3 @@
   <% end %>
 </div>
 
-<%= link_to "New jewel", new_jewel_path %>
