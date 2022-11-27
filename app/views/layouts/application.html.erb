@@ -11,7 +11,11 @@
   </head>
 
   <body class="container mt-3">
-    <p style="color: green"><%= notice %></p>
+    <% if current_user %>
+      <%= button_to "Logout", destroy_session_path(current_user), method: :delete, data: {turbo: false}, class: "btn btn-secondary" %>
+    <% end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
     <%= yield %>
   </body>
