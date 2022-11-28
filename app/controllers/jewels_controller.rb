@@ -3,25 +3,30 @@ class JewelsController < ApplicationController
 
   # GET /jewels or /jewels.json
   def index
+    authorize Jewel
     @jewels = Jewel.all
   end
 
   # GET /jewels/1 or /jewels/1.json
   def show
+    authorize @jewel
   end
 
   # GET /jewels/new
   def new
     @jewel = Jewel.new
+    authorize @jewel
   end
 
   # GET /jewels/1/edit
   def edit
+    authorize @jewel
   end
 
   # POST /jewels or /jewels.json
   def create
     @jewel = Jewel.new(jewel_params)
+    authorize @jewel
 
     respond_to do |format|
       if @jewel.save
@@ -36,6 +41,8 @@ class JewelsController < ApplicationController
 
   # PATCH/PUT /jewels/1 or /jewels/1.json
   def update
+    authorize @jewel
+
     respond_to do |format|
       if @jewel.update(jewel_params)
         format.html { redirect_to jewel_url(@jewel), notice: "Jewel was successfully updated." }
@@ -49,6 +56,7 @@ class JewelsController < ApplicationController
 
   # DELETE /jewels/1 or /jewels/1.json
   def destroy
+    authorize @jewel
     @jewel.destroy
 
     respond_to do |format|
