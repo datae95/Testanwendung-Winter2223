@@ -20,3 +20,12 @@ Die Logindaten sind `user@cde.ev` oder `admin@cde.ev` jeweils mit dem Passwort `
 
 ## Tipps und Tricks
 Hier werde ich nützliche Tipps und Tricks, sowie Hinweise zu Fehlermeldungen, die anderen vor euch begegnet sind und die euch auch begegnen können, teilen.
+
+### Ruby Version
+Wenn ihr die Fehlermeldung
+```
+Your Ruby version is 3.1.x, but your Gemfile specified 3.1.2 
+```
+erhaltet, gibt es für euch zwei Möglichkeiten:
+- Ihr könnt mit eurem Ruby Versionsmanager zusätzlich die Version 3.1.2 installieren, um die Testanwendung mit dieser zu starten. Wer rvm nutzt, verwendet im Projektordner erst `rvm install 3.1.2` und dann `rvm use 3.1.2`. Wer rbenv nutzt, führt erst `rbenv install 3.1.2` und dann `rbenv local 3.1.2` aus. Dann könnt ihr nochmal versuchen, das Projekt zu starten.
+- Alternativ könnt ihr im `Gemfile`, die Datei im Projektordner, die Rubyversion von 3.1.2 auf 3.1.x setzen. Das wird allerdings nicht klappen, wenn ihr 3.2.x oder 2.x.y installiert habt. Dann nutzt bitte die erste Möglichkeit
