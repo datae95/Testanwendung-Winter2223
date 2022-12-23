@@ -12,7 +12,10 @@ In einer Konsole navigiert ihr dann in diesen Ordner. (das funktioniert im allge
 Dort führt ihr folgende Befehle aus:
 ```
 bundle install
-rails db:{drop,create,migrate,seed}
+rails db:drop
+rails db:create
+rails db:migrate
+rails db:seed
 gem install foreman
 foreman start -f Procfile.dev
 ```
