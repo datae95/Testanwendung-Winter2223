@@ -13,7 +13,7 @@ Dort führt ihr folgende Befehle aus:
 ```
 bundle install
 rails db:{drop,create,migrate,seed}
-rails bin/dev
+bin/dev
 ```
 Dann öffnet ihr `localhost:3000` im Browser.
 Die Logindaten sind `user@cde.ev` oder `admin@cde.ev` jeweils mit dem Passwort `asdfasdf`.
